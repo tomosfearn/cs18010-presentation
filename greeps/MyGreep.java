@@ -80,7 +80,7 @@ public class MyGreep extends Greep
             turnTowards(getMemory(1), getMemory(2));
             move();
         }
-        else if (numberOfOpponents(false) > 2) { //cowardness 
+        else if (numberOfOpponents(false) > 3) { //cowardness 
             kablam();
         }
         else {
