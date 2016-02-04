@@ -1,1 +1,1 @@
-04/02/2016: the greps seem to crowd together even when all tomatoes again, possibly need to refresh the x and y coordinates. - Tom
+04/02/2016: the greps seem to crowd together even when all tomatoes are gone, possibly need to refresh the x and y coordinates. - Tom
