@@ -71,7 +71,7 @@ public class MyGreep extends Greep
         
         else if (getTomatoes() != null) {
             TomatoPile tomatoes = getTomatoes();
-            if (!blockAtPile(tomatoes)) {
+            if (!blockAtPile(tomatoes)) { //if there is no block on the pile, go to the centre of the pile.
                 turnTowards(tomatoes.getX(), tomatoes.getY());
                 move();
             }
@@ -80,7 +80,7 @@ public class MyGreep extends Greep
             turnTowards(getMemory(1), getMemory(2));
             move();
         }
-        else if (numberOfOpponents(false) > 3) {
+        else if (numberOfOpponents(false) > 2) { //cowardness 
             kablam();
         }
         else {
