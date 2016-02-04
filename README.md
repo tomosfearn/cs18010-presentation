@@ -2,7 +2,7 @@
 Presentation for module CS18010, Computer Science.
 Other group members will need to fork this repository to be able to edit its content
 
-*Rules:
+* Rules:
  
 * Rule 1:
 * Only change the class 'MyGreep'. No other classes may be modified or created.
