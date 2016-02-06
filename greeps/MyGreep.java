@@ -66,7 +66,14 @@ public class MyGreep extends Greep
         checkFood(); //check for the tomato first
         
         if (carryingTomato()) {
-            bringTomatoHome();
+            if (atWater()) {
+                int r = getRotation();
+                setRotation (r + Greenfoot.getRandomNumber(2) * 180 - 90);
+                move();
+            }
+            else {
+                bringTomatoHome();
+            }
         }
         
         else if (getTomatoes() != null) {
