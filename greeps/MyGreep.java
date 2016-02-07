@@ -45,7 +45,7 @@ public class MyGreep extends Greep
 {
     // Remember: you cannot extend the Greep's memory. So:
     // no additional fields (other than final fields) allowed in this class!
-    
+   
     private static final int TOMATO_LOCATION_KNOWN = 1;
     
     /**
@@ -68,7 +68,7 @@ public class MyGreep extends Greep
         if (carryingTomato()) {
             if (atWater()) {
                 int r = getRotation();
-                setRotation (r + Greenfoot.getRandomNumber(2) * 180 - 90);
+                setRotation (r + Greenfoot.getRandomNumber(80) + 60);
                 move();
             }
             else {
@@ -86,6 +86,11 @@ public class MyGreep extends Greep
         else if (getMemory(0) == TOMATO_LOCATION_KNOWN) {
             turnTowards(getMemory(1), getMemory(2));
             move();
+            if (Math.abs(getMemory(1) - getX()) < 5 && Math.abs( getMemory(2) - getY()) < 5){
+                if (getTomatoes() == null){
+                    setMemory(0, TOMATO_LOCATION_KNOWN - 1);
+                }
+            }
         }
         else if (numberOfOpponents(false) > 3) { //cowardness 
             kablam();
@@ -161,7 +166,15 @@ public class MyGreep extends Greep
             dropTomato();
         }
         else {
+            int r = getRotation();
             turnHome();
+            int r2 = getRotation();
+            if ( Math.abs(r - r2) < 180){
+                setRotation((r + r2) / 2);
+            }else{
+                //setRotation((r + r2 - 180) / 2);
+                turnHome();
+            }
             move();
         }
             
