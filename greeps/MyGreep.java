@@ -105,19 +105,6 @@ public class MyGreep extends Greep
             setRotation (r + Greenfoot.getRandomNumber(2) * 180 - 90);
             move();
         }
-        // if (carryingTomato()) {
-            // if(atShip()) {
-                // dropTomato();
-            // }
-            // else {
-                // turnHome();
-                // move();
-            // }
-        // }
-        // else {
-            // randomWalk();
-            // checkFood();
-        // }
     }
     
     /** 
