@@ -84,6 +84,7 @@ public class MyGreep extends Greep
                 move();
             }
         }
+        
         else if (getMemory(0) == TOMATO_LOCATION_KNOWN) {
             turnTowards(getMemory(1), getMemory(2));
             move();
@@ -93,9 +94,11 @@ public class MyGreep extends Greep
                 }
             }
         }
+        
         else if (numberOfOpponents(false) > 3) { //cowardness 
             kablam();
         }
+        
         else {
             randomWalk();
         }
@@ -167,22 +170,7 @@ public class MyGreep extends Greep
         }
             
     }
-    /**
-     * GREEPS' NUMBERS
-     * IN SHIP'S DATABANK[10 - 999]:
-     * [i] = greep's number
-     * [i+1] = its current X
-     * [i+2] = its current Y
-     * [i+3] = greep's memory[0] (1 - has food, 0/null - hasn't got food)
-     * [i+4] = greep's memory[1] (X pos of food)
-     * [i+5] = greep's memory[2] (Y pos of food)
-     * [i+6] = free (now)
-     * [i+7] = free (now)
-     * [i+8] = free (now)
-     * [i+9] = free (now)
-     * 
-     * Returns current greep's number (makes new one if greep hasn't got one)
-     */
+
     private int getNumber(){
         int data[] = getShipData();
         int number = 0;
@@ -199,26 +187,7 @@ public class MyGreep extends Greep
         return getMemory(3);
     }
     
-    private void improvedMove(){
-        int data[] = getShipData();
-        int number = getNumber();
-        int stuckX = data[number+1];
-        int stuckY = data[number+2];
-        int stuckI = data[number+3];
-        if (stuckI == 30){
-            stuckI = 0;
-            if (Math.abs(stuckX - getX()) < 15 && Math.abs(stuckY - getY()) < 15){
-                turn(180);
-                randomWalk();
-            }
-        } else {
-            stuckI ++;
-        }
-        data[number+3] = stuckI;
-        data[number+1] = getX();
-        data[number+2] = getY();
-        move();
-    }
+
     /**
      * If the grep ends up at a pile where there are no friends blocking, the grep will block the pile of tomatoes
      */

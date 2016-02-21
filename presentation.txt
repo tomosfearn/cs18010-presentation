@@ -1,0 +1,6 @@
+The presentation will be finished by 9PM tonight:
+
+Tom & Kamil are talking about the code involved.
+(Letters are at the top left of each slide to remind what slide we are talking about.)
+
+Ashley and Sorres are talking about Greenfoot and GitHub and the general experience of using the software.
