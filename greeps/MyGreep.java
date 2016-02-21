@@ -69,7 +69,7 @@ public class MyGreep extends Greep
         if (carryingTomato()) {
             if (atWater()) {
                 int r = getRotation();
-                setRotation (r + Greenfoot.getRandomNumber(180) + 90);
+                setRotation (r + Greenfoot.getRandomNumber(80) + 60);
                 move();
             }
             else {
