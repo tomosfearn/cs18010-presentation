@@ -69,7 +69,7 @@ public class MyGreep extends Greep
         if (carryingTomato()) {
             if (atWater()) {
                 int r = getRotation();
-                setRotation (r + Greenfoot.getRandomNumber(80) + 60);
+                setRotation (r + Greenfoot.getRandomNumber(180) + 90);
                 move();
             }
             else {
@@ -84,6 +84,7 @@ public class MyGreep extends Greep
                 move();
             }
         }
+        
         else if (getMemory(0) == TOMATO_LOCATION_KNOWN) {
             turnTowards(getMemory(1), getMemory(2));
             move();
@@ -93,9 +94,11 @@ public class MyGreep extends Greep
                 }
             }
         }
+        
         else if (numberOfOpponents(false) > 3) { //cowardness 
             kablam();
         }
+        
         else {
             randomWalk();
         }
