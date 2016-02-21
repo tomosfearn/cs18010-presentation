@@ -1,0 +1,42 @@
+Pseudo Code:
+
+in main function {
+check for food function
+  if we are carrying a tomato {
+    if we are at water {
+      getRotation function
+      setRotation to value
+      moveGreep function
+  }
+  else {
+    bring the tomato home function
+  }
+}
+
+else if get tomatoes is not null {
+  the class TomatoPile object tomatoes = getTomatoes function
+  if there is no block on the pile of tomatoes {
+    turn towards the coordinates location of the tomato pile
+    moveGreep function
+  }
+}
+
+else if the memory at location 0 is where the know tomato location is {
+  turn towards the coordinates of the tomato pile
+  moveGreep function
+  if the tomatoes at the location are null {
+    clear the memory at location 0
+  }
+}
+
+else if the number of enemy greeps is more than 3 {
+  kablam function
+}
+
+else if the greeps is at water or an enemy greep is blocking the pile
+  get rotation function
+  set the rotation value
+  moveGreep function
+}
+
+
